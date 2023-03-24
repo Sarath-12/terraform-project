@@ -41,7 +41,7 @@ EOF
   }
 }
 
-resource "aws_security_group" "vm" {
+resource "aws_security_group" "three" {
   name = "elb-sarath"
   ingress {
     from_port   = 22

@@ -23,23 +23,7 @@ EOF
   }
 }
 
-resource "aws_instance" "two" {
-  ami             = "ami-0d81306eddc614a45"
-  instance_type   = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.three.id]
-  availability_zone = "ap-south-1b"
-  user_data       = <<EOF
-#!/bin/bash
-sudo -i
-yum install httpd -y
-systemctl start httpd
-chkconfig httpd on
-echo "hai all this is my website created by terraform infrastructurte by raham sir server-2" > /var/www/html/index.html
-EOF
-  tags = {
-    Name = "server-2"
-  }
-}
+
 
 resource "aws_security_group" "three" {
   name = "elb-sarath"
@@ -67,6 +51,18 @@ resource "aws_security_group" "three" {
 
 resource "aws_s3_bucket" "four" {
   bucket = "sarath0077552bucketterraf"
+}
+
+resource "aws_iam_user" "five" {
+name = "sarathser11" 
+}
+
+resource "aws_ebs_volume" "six" {
+ availability_zone = "ap-south-1b"
+  size = 40
+  tags = {
+    Name = "ebs-001"
+  }
 }
 
 

@@ -69,14 +69,4 @@ resource "aws_s3_bucket" "four" {
   bucket = "sarath0077552bucketterraf"
 }
 
-resource "aws_iam_user" "five" {
-name = "sarath12" 
-}
 
-resource "aws_ebs_volume" "six" {
- availability_zone = "ap-south-1b"
-  size = 40
-  tags = {
-    Name = "ebs-0783"
-  }
-}

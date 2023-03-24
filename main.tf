@@ -41,8 +41,8 @@ EOF
   }
 }
 
-resource "aws_security_group" "three" {
-  name = "elb-sg"
+resource "aws_security_group" "vm" {
+  name = "elb-sarath"
   ingress {
     from_port   = 22
     to_port     = 22
@@ -66,11 +66,11 @@ resource "aws_security_group" "three" {
 }
 
 resource "aws_s3_bucket" "four" {
-  bucket = "sarath0077552bucketterra"
+  bucket = "sarath0077552bucketterraf"
 }
 
 resource "aws_iam_user" "five" {
-name = "sarath11" 
+name = "sarath12" 
 }
 
 resource "aws_ebs_volume" "six" {

@@ -1,4 +1,4 @@
-resource "aws_elb" "bar" {
+resource "aws_elb" "sarth" {
   name               = "sarath-terraform-elb"
   availability_zones = ["ap-south-1a", "ap-south-1b"]
 
